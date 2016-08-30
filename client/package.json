@@ -7,8 +7,30 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "test-cov": "jest  --coverage",
+    "docs": "./node_modules/.bin/documentjs --watch"
   },
   "author": "Sreeram",
-  "license": "ISC"
+  "license": "ISC",
+  "jest": {
+    "unmockedModulePathPatterns": [
+      "react"
+    ],
+    "_testPathDirs": [
+        "./"
+    ],
+    "_testFileExtensions": [
+        "test.js"
+    ],
+    "_testDirectoryName": "src/js/components",
+    "_automock": false
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "eslint": "^3.4.0",
+    "jest-cli": "^14.1.0"
+  }
 }
