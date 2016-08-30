@@ -7,7 +7,7 @@
     "test": ""
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha __tests__"
   },
   "author": "Sreeram",
   "license": "ISC"
