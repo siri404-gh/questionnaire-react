@@ -10,5 +10,8 @@
     "test": "mocha __tests__"
   },
   "author": "Sreeram",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "documentjs": "^0.4.4"
+  }
 }

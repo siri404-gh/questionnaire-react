@@ -20,16 +20,17 @@
       "react"
     ],
     "_testPathDirs": [
-        "./"
+      "./"
     ],
     "_testFileExtensions": [
-        "test.js"
+      "test.js"
     ],
     "_testDirectoryName": "src/js/components",
     "_automock": false
   },
   "devDependencies": {
     "babel-eslint": "^6.1.2",
+    "documentjs": "^0.4.4",
     "eslint": "^3.4.0",
     "jest-cli": "^14.1.0"
   }
