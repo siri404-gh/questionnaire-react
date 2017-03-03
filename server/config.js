@@ -1,4 +1,5 @@
 module.exports = {
+    localDB: true,
     apiPort: 5000,
     dbUsername:'user',
     dbPassword:'password',

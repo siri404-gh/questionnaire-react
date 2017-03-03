@@ -4,8 +4,7 @@ var mongoose = require('mongoose');
 var path = require('path');
 var config = require('./config');
 var Model = require('./model/model');
-var db = 'mongodb://'+config.dbUsername+':'+config.dbPassword+'@'+config.dbHostname+':'+config.dbPort+'/'+config.dbName;
-// var db = 'mongodb://localhost/questionnaire';
+var db = (config.localDB)? 'mongodb://localhost/questionnaire2' : 'mongodb://'+config.dbUsername+':'+config.dbPassword+'@'+config.dbHostname+':'+config.dbPort+'/'+config.dbName;
 var app = new express();
 
 mongoose.connect(db);
@@ -16,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-app.use(express.static( './client/src'));
+app.use(express.static( '../client/dist'));
 
 app.get('/response', function(req, res) {
     Model.find({})
